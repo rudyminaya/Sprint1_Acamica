@@ -1,0 +1,46 @@
+/* Importando fuente IBM Plex de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Asignando variables */
+$aguamarina: #00f3bb;
+$azul: #0000ec;
+$azultext: #060a24;
+$grad: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+$font-ibm: 'IBM Plex Mono', monospace;
+/* Normalización */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-ibm;
+}
+body {
+    color: $azultext;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Fin de la normalización */
+.text-blue {
+    color: $azul;
+}
+.text-white {
+    color: white;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.mainTitle {
+    font-size: 2.25rem;
+    line-height: 42px;
+}
+.parrafo {
+    font-size: 14px;
+    line-height: 22px;
+}
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
