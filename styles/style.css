@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Importando fuente IBM Plex de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 /* Asignando variables */
 /* Normalización */
 * {
@@ -9,6 +10,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "IBM Plex Mono", monospace;
+  text-decoration: none;
 }
 
 body {
@@ -38,6 +40,8 @@ html {
 .mainTitle {
   font-size: 2.25rem;
   line-height: 42px;
+  font-weight: 400;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .parrafo {
@@ -48,5 +52,52 @@ html {
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
+}
+
+.header .parrafo {
+  margin: 16px 0 36px 0;
+}
+
+.boton-deg {
+  background: #00f3bb;
+  border: none;
+  padding: 13px 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #060a24;
+}
+
+.boton-deg:hover {
+  background: linear-gradient(35deg, #0000a3 0%, blue 84%);
+  color: white;
+  -webkit-transition: all ease 200ms;
+  transition: all ease 200ms;
+}
+
+.episodios {
+  background: linear-gradient(35deg, #0000a3 0%, blue 100%);
+  -webkit-clip-path: polygon(0 3%, 100% 0, 100% 94%, 0 97%);
+          clip-path: polygon(0 3%, 100% 0, 100% 94%, 0 97%);
+  padding-top: 80px;
+  padding-bottom: 250px;
+}
+
+.episodios__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 11px;
+}
+
+.episodios .mainTitle {
+  margin-bottom: 21px;
 }
 /*# sourceMappingURL=style.css.map */

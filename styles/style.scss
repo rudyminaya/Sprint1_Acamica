@@ -1,17 +1,25 @@
 /* Importando fuente IBM Plex de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 /* Asignando variables */
 $aguamarina: #00f3bb;
 $azul: #0000ec;
 $azultext: #060a24;
-$grad: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+$grad: linear-gradient(35deg, rgba(0, 0, 163, 1) 0%, rgba(0, 0, 255, 1) 84%);
+$bluegrad: linear-gradient(
+    35deg,
+    rgba(0, 0, 163, 1) 0%,
+    rgba(0, 0, 255, 1) 100%
+);
 $font-ibm: 'IBM Plex Mono', monospace;
+$font-ibmSans: 'IBM Plex Sans', sans-serif;
 /* Normalización */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $font-ibm;
+    text-decoration: none;
 }
 body {
     color: $azultext;
@@ -35,6 +43,8 @@ html {
 .mainTitle {
     font-size: 2.25rem;
     line-height: 42px;
+    font-weight: 400;
+    font-family: $font-ibmSans;
 }
 .parrafo {
     font-size: 14px;
@@ -43,4 +53,40 @@ html {
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
+}
+.header .parrafo {
+    margin: 16px 0 36px 0;
+}
+.boton-deg {
+    background: $aguamarina;
+    border: none;
+    padding: 13px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $azultext;
+}
+.boton-deg:hover {
+    background: $grad;
+    color: white;
+    transition: all ease 200ms;
+}
+.episodios {
+    background: $bluegrad;
+    clip-path: polygon(0 3%, 100% 0, 100% 94%, 0 97%);
+    padding-top: 80px;
+    padding-bottom: 250px;
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 11px;
+    }
+}
+.episodios .mainTitle {
+    margin-bottom: 21px;
 }
