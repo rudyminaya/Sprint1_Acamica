@@ -5,7 +5,11 @@
 $aguamarina: #00f3bb;
 $azul: #0000ec;
 $azultext: #060a24;
-$grad: linear-gradient(35deg, rgba(0, 0, 163, 1) 0%, rgba(0, 0, 255, 1) 84%);
+$grad: linear-gradient(
+    225deg,
+    rgba(0, 0, 254, 1) 0%,
+    rgba(0, 240, 184, 1) 100%
+);
 $bluegrad: linear-gradient(
     35deg,
     rgba(0, 0, 163, 1) 0%,
@@ -19,7 +23,6 @@ $font-ibmSans: 'IBM Plex Sans', sans-serif;
     padding: 0;
     box-sizing: border-box;
     font-family: $font-ibm;
-    text-decoration: none;
 }
 body {
     color: $azultext;
@@ -39,6 +42,7 @@ html {
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
+    overflow: hidden;
 }
 .mainTitle {
     font-size: 2.25rem;
@@ -53,14 +57,15 @@ html {
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
-}
-.header .parrafo {
-    margin: 16px 0 36px 0;
+    .parrafo {
+        margin: 16px 0 36px 0;
+    }
 }
 .boton-deg {
     background: $aguamarina;
     border: none;
     padding: 13px 0;
+    max-width: 345px;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -70,6 +75,9 @@ html {
     font-size: 1rem;
     font-weight: 500;
     color: $azultext;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
 }
 .boton-deg:hover {
     background: $grad;
@@ -79,14 +87,203 @@ html {
 .episodios {
     background: $bluegrad;
     clip-path: polygon(0 3%, 100% 0, 100% 94%, 0 97%);
-    padding-top: 80px;
-    padding-bottom: 250px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    &__content {
+        width: 95%;
+        max-width: 1240px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 11px;
+        column-gap: 70px;
+    }
+    &__episodio {
+        max-width: 584px;
+        width: 100%;
+    }
+    .mainTitle {
+        margin-bottom: 21px;
+    }
+}
+.nosotros {
+    margin-top: -150px;
+    padding-bottom: 54px;
+    position: relative;
+    z-index: 2;
+    &__imagen {
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 450px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    &__content {
+        .mainTitle {
+            margin-top: 27px;
+            margin-bottom: 8px;
+        }
+        .parrafo {
+            margin-bottom: 15px;
+        }
+    }
+}
+.entrevistas {
+    .mainTitle {
+        margin-bottom: 14px;
+    }
+    &__grillas {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+    }
+}
+.topicos {
+    .mainTitle {
+        margin: 48px 0 24px 0;
+    }
     &__content {
         display: flex;
         flex-wrap: wrap;
-        row-gap: 11px;
+        align-items: center;
+        row-gap: 40px;
+        padding-bottom: 42px;
+        justify-content: space-between;
+    }
+    &__detail {
+        width: 260px;
+        margin: 0 auto;
+        figure {
+            margin: 13px auto;
+            img {
+                margin: auto;
+                display: block;
+            }
+        }
+        p {
+            font-size: 24px;
+            font-family: $font-ibmSans;
+            font-weight: 600;
+            text-align: center;
+        }
     }
 }
-.episodios .mainTitle {
-    margin-bottom: 21px;
+.novedadesContainer {
+    background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    padding: 100px 0;
+    .mainTitle {
+        text-align: center;
+        margin-bottom: 36px;
+    }
+    .boton-deg {
+        width: 90%;
+    }
+}
+.footer {
+    padding: 24px 0 31px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__copyright {
+        padding: 25px 0;
+    }
+    .redes {
+        a {
+            text-decoration: none;
+            padding: 0 15px;
+            i {
+                font-size: 16px;
+                color: #060a24;
+            }
+        }
+    }
+}
+@media (min-width: 700px) {
+    .entrevistas__grillas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        max-width: 700px;
+        margin: auto;
+    }
+}
+@media (min-width: 900px) {
+    .entrevistas {
+        &__grillas {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            max-width: 100%;
+            margin: auto;
+            img {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .mainTitle {
+        font-size: 3rem;
+        line-height: 3.2rem;
+        padding-bottom: 20px;
+    }
+    .parrafo {
+        font-size: 1rem;
+    }
+    .boton-deg {
+        font-size: 1.125rem;
+    }
+    .episodios {
+        clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+        padding-top: 90px;
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+            margin: 0 auto;
+        }
+    }
+    .nosotros {
+        display: flex;
+        align-items: center;
+    }
+    .header {
+        .parrafo {
+            width: 628px;
+        }
+        .mainTitle {
+            font-size: 4rem;
+            line-height: 4.2rem;
+            padding: 0;
+        }
+        .boton-deg {
+            margin-left: 0;
+            margin-right: 0;
+            max-width: 226px;
+        }
+    }
+    .novedadesContainer {
+        clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+        padding: 200px 0 150px 0;
+    }
+    .footer {
+        flex-direction: row;
+        &__copyright {
+            padding: 0;
+        }
+    }
 }

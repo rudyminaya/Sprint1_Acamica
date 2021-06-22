@@ -14,22 +14,24 @@
         <title>Sprint 1 | Podcast</title>
     </head>
     <body>
+        <nav class="menu"></nav>
         <header class="container header">
             <h1 class="mainTitle">
                 Hello <s>world</s> pale blue dot<span class="text-blue">.</span>
             </h1>
             <p class="parrafo">
-                Un podcast que explora el mundo de la programación. Nuevos
-                episodios, todos los jueves cada 15 días.
+                El portal de podcasts que explora el mundo de la programación y
+                la tecnología. Nuevos episodios, todos los jueves cada 15 días.
             </p>
-            <a href="#episodios" class="boton-deg">Conocé más</a>
+            <a href="#nosotros" class="boton-deg">Conocé más</a>
         </header>
         <main id="episodios" class="episodios">
-            <div class="container">
-                <h1 class="mainTitle text-white">Episodios</h1>
+            <div class="episodios">
+                <h1 class="container mainTitle text-white">Episodios</h1>
                 <div class="episodios__content">
                     <iframe
                         src="https://open.spotify.com/embed/episode/5a2wFLTXtoPHIfmsd0tlBD"
+                        class="episodios__episodio"
                         width="100%"
                         height="232"
                         frameborder="0"
@@ -38,6 +40,7 @@
                     ></iframe>
                     <iframe
                         src="https://open.spotify.com/embed/episode/2gKNevErDRRcOxE3cqDcs5"
+                        class="episodios__episodio"
                         width="100%"
                         height="232"
                         frameborder="0"
@@ -46,6 +49,7 @@
                     ></iframe>
                     <iframe
                         src="https://open.spotify.com/embed/episode/0bUuzPL59TzTOR0kUQASH8"
+                        class="episodios__episodio"
                         width="100%"
                         height="232"
                         frameborder="0"
@@ -54,6 +58,7 @@
                     ></iframe>
                     <iframe
                         src="https://open.spotify.com/embed/episode/7ccjoW123ukcSUkPEdbxnZ?theme=0"
+                        class="episodios__episodio"
                         width="100%"
                         height="232"
                         frameborder="0"
@@ -63,21 +68,21 @@
                 </div>
             </div>
         </main>
-        <section>
-            <figure>
+        <section id="nosotros" class="nosotros container">
+            <figure class="nosotros__imagen">
                 <img
                     src="./assets/phone.png"
                     alt="Teléfono móvil mostrando un artículo con título 'The Secret History of Women in Coding'"
                 />
             </figure>
-            <div>
+            <div class="nosotros__content">
                 <h1 class="mainTitle">De dónde venimos</h1>
-                <p>
+                <p class="parrafo">
                     Our posturings, our imagined self-importance, the delusion
                     that we have some privileged position in the Universe, are
                     challenged by this point of pale light.
                 </p>
-                <p>
+                <p class="parrafo">
                     Our planet is a lonely speck in the great enveloping cosmic
                     dark. In our obscurity, in all this vastness, there is no
                     hint that help will come from elsewhere to save us from
@@ -85,41 +90,36 @@
                 </p>
             </div>
         </section>
-        <section>
-            <h1 class="mainTitle">Invitadas/os estelares</h1>
-            <div>
-                <figure>
-                    <img
-                        src="./assets/grace-hopper.png"
-                        alt="Foto de Grace Hopper"
-                    />
-                    <img
-                        src="./assets/Katie-Bouman.png"
-                        alt="Foto de Katie-Bouman"
-                    />
-                    <img
-                        src="./assets/Margaret_Hamilton.png"
-                        alt="Foto de Margaret Hamilton"
-                    />
-                    <img
-                        src="./assets/An_E.R.A.Univac_1103_computer_in_the_1950s.png"
-                        alt="Foto de E.R.A. Univac"
-                    />
-                    <img
-                        src="./assets/Computer_operators_with_an_Eniac_—_the_world’s_first_programmable_general-purpose_computer.png"
-                        alt="Imagen de 2 mujeres conectando cables a lo que sería la computadora Eniac"
-                    />
-                    <img
-                        src="./assets/susan-kare.png"
-                        alt="Foto de Susan Kare"
-                    />
-                </figure>
+        <section id="entrevistas" class="entrevistas">
+            <h1 class="mainTitle container">Invitadas/os estelares</h1>
+            <div class="entrevistas__grillas">
+                <img
+                    src="./assets/grace-hopper.png"
+                    alt="Foto de Grace Hopper"
+                />
+                <img
+                    src="./assets/Katie-Bouman.png"
+                    alt="Foto de Katie-Bouman"
+                />
+                <img
+                    src="./assets/Margaret_Hamilton.png"
+                    alt="Foto de Margaret Hamilton"
+                />
+                <img
+                    src="./assets/An_E.R.A.Univac_1103_computer_in_the_1950s.png"
+                    alt="Foto de E.R.A. Univac"
+                />
+                <img
+                    src="./assets/Computer_operators_with_an_Eniac_—_the_world’s_first_programmable_general-purpose_computer.png"
+                    alt="Imagen de 2 mujeres conectando cables a lo que sería la computadora Eniac"
+                />
+                <img src="./assets/susan-kare.png" alt="Foto de Susan Kare" />
             </div>
         </section>
-        <section>
+        <section id="topicos" class="topicos container">
             <h1 class="mainTitle">Algunos de nuestros temas</h1>
-            <div>
-                <div class="icono">
+            <div class="topicos__content">
+                <div class="topicos__detail">
                     <figure>
                         <img
                             src="./assets/icon1.svg"
@@ -128,7 +128,7 @@
                     </figure>
                     <p>Trabajo remoto</p>
                 </div>
-                <div class="icono">
+                <div class="topicos__detail">
                     <figure>
                         <img
                             src="./assets/icon2.svg"
@@ -137,7 +137,7 @@
                     </figure>
                     <p>Repensando la programación</p>
                 </div>
-                <div class="icono">
+                <div class="topicos__detail">
                     <figure>
                         <img
                             src="./assets/icon3.svg"
@@ -146,7 +146,7 @@
                     </figure>
                     <p>Bases del código</p>
                 </div>
-                <div class="icono">
+                <div class="topicos__detail">
                     <figure>
                         <img
                             src="./assets/icon4.svg"
@@ -157,13 +157,13 @@
                 </div>
             </div>
         </section>
-        <section>
-            <h1 class="mainTitle">¿Querés las últimas novedades?</h1>
-            <button>Escuchá los episodios</button>
+        <section class="novedadesContainer">
+            <h1 class="mainTitle text-white">¿Querés las últimas novedades?</h1>
+            <button class="boton-deg">Escuchá los episodios</button>
         </section>
-        <footer>
-            <div>
-                <p>© 2020— Hello blue pale dot</p>
+        <footer class="footer container">
+            <div class="footer__copyright">
+                <p class="parrafo">© 2020— Hello blue pale dot</p>
             </div>
             <div class="redes">
                 <a href="https://www.spotify.com/">
