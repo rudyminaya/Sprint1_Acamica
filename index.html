@@ -14,7 +14,23 @@
         <title>Sprint 1 | Podcast</title>
     </head>
     <body>
-        <nav class="menu"></nav>
+        <nav class="menu">
+            <div class="menuContainer">
+                <img src="./assets/logo.svg" alt="Logo de Blue Dot" />
+                <div class="menuItems">
+                    <input id="bar" type="checkbox" />
+                    <label for="bar" class="bar">
+                        <div class="barra"></div>
+                    </label>
+                    <div class="items">
+                        <a href="#episodios" class="item">Episodios</a>
+                        <a href="#nosotros" class="item">Nosotros</a>
+                        <a href="#entrevistas" class="item">Entrevistas</a>
+                        <a href="#topicos" class="item">Topicos</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <header class="container header">
             <h1 class="mainTitle">
                 Hello <s>world</s> pale blue dot<span class="text-blue">.</span>
@@ -159,7 +175,7 @@
         </section>
         <section class="novedadesContainer">
             <h1 class="mainTitle text-white">¿Querés las últimas novedades?</h1>
-            <button class="boton-deg">Escuchá los episodios</button>
+            <a href="#episodios" class="boton-deg">Escuchá los episodios</a>
         </section>
         <footer class="footer container">
             <div class="footer__copyright">

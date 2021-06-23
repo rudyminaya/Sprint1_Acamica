@@ -254,6 +254,137 @@ html {
 .footer .redes a i {
   font-size: 16px;
   color: #060a24;
+  -webkit-transition: all ease-in-out 150ms;
+  transition: all ease-in-out 150ms;
+}
+
+.footer .redes a :hover {
+  color: #00f3bb;
+}
+
+/* ESTILOS DEL MENU */
+.menu {
+  height: 45px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 50;
+}
+
+.menu .menuContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.menuItems {
+  position: relative;
+}
+
+.menuItems input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+}
+
+.menuItems .bar {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 17px;
+  display: block;
+}
+
+.menuItems .barra {
+  position: relative;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+.menuItems .barra,
+.menuItems .barra::after,
+.menuItems .barra::before {
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #060a24;
+  pointer-events: none;
+}
+
+.menuItems .barra::after,
+.menuItems .barra::before {
+  position: absolute;
+}
+
+.menuItems .barra::after {
+  bottom: -6px;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+.menuItems .barra::before {
+  bottom: -12px;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+.menuItems #bar:checked ~ .items {
+  right: 0;
+}
+
+.menuItems #bar:checked ~ .bar > .barra {
+  background-color: transparent;
+}
+
+.menuItems #bar:checked ~ .bar > .barra::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menuItems #bar:checked ~ .bar > .barra::before {
+  -webkit-transform: translatey(-6px) rotate(-45deg);
+          transform: translatey(-6px) rotate(-45deg);
+}
+
+.menuItems .items {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 45px;
+  right: -100%;
+  width: 100%;
+  background-color: #0000ec;
+  padding: 16px;
+  z-index: 20;
+  -webkit-transition: right ease-in-out 200ms;
+  transition: right ease-in-out 200ms;
+}
+
+.menuItems .items .item {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 24px;
+  text-decoration: none;
+}
+
+.menuItems .items .item:last-child {
+  margin-bottom: 0;
 }
 
 @media (min-width: 700px) {
@@ -271,6 +402,55 @@ html {
 }
 
 @media (min-width: 900px) {
+  .menu {
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+  }
+  .menu .menuContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .menuItems {
+    width: 60%;
+    margin: auto 0;
+  }
+  .menuItems .bar {
+    display: none;
+  }
+  .menuItems .items {
+    position: static;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .menuItems .items .item {
+    color: #060a24;
+    display: block;
+    margin-bottom: 0;
+    font-weight: 400;
+    padding: 10px 0;
+    -webkit-transition: all ease-in-out 150ms;
+    transition: all ease-in-out 150ms;
+  }
+  .menuItems .items .item:active {
+    color: rgba(6, 10, 36, 0.56);
+    text-decoration: line-through;
+  }
+  .menuItems .items .item:hover {
+    text-decoration: line-through;
+    color: #00f3bb;
+  }
   .entrevistas__grillas {
     display: -ms-grid;
     display: grid;

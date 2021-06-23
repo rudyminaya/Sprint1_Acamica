@@ -207,7 +207,104 @@ html {
             i {
                 font-size: 16px;
                 color: #060a24;
+                transition: all ease-in-out 150ms;
             }
+            :hover {
+                color: $aguamarina;
+            }
+        }
+    }
+}
+/* ESTILOS DEL MENU */
+.menu {
+    height: 45px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 50;
+
+    .menuContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 100%;
+    }
+}
+
+.menuItems {
+    position: relative;
+    input {
+        appearance: none;
+        display: none;
+    }
+
+    .bar {
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 17px;
+        display: block;
+    }
+
+    .barra {
+        position: relative;
+        transition: all ease-in-out 200ms;
+    }
+    .barra,
+    .barra::after,
+    .barra::before {
+        content: '';
+        height: 3px;
+        width: 20px;
+        background-color: #060a24;
+        pointer-events: none;
+    }
+    .barra::after,
+    .barra::before {
+        position: absolute;
+    }
+    .barra::after {
+        bottom: -6px;
+        transition: all ease-in-out 200ms;
+    }
+    .barra::before {
+        bottom: -12px;
+        transition: all ease-in-out 200ms;
+    }
+    #bar:checked ~ .items {
+        right: 0;
+    }
+    #bar:checked ~ .bar > .barra {
+        background-color: transparent;
+    }
+    #bar:checked ~ .bar > .barra::after {
+        transform: rotate(45deg);
+    }
+    #bar:checked ~ .bar > .barra::before {
+        transform: translatey(-6px) rotate(-45deg);
+    }
+    .items {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 45px;
+        right: -100%;
+        width: 100%;
+        background-color: $azul;
+        padding: 16px;
+        z-index: 20;
+        transition: right ease-in-out 200ms;
+
+        .item {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 24px;
+            text-decoration: none;
+        }
+        .item:last-child {
+            margin-bottom: 0;
         }
     }
 }
@@ -221,6 +318,50 @@ html {
     }
 }
 @media (min-width: 900px) {
+    .menu {
+        height: 80px;
+        width: 100%;
+        background-color: #fff;
+
+        .menuContainer {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    }
+    .menuItems {
+        width: 60%;
+        margin: auto 0;
+        .bar {
+            display: none;
+        }
+        .items {
+            position: static;
+            right: 0;
+            top: 0;
+            background-color: transparent;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+
+            .item {
+                color: $azultext;
+                display: block;
+                margin-bottom: 0;
+                font-weight: 400;
+                padding: 10px 0;
+                transition: all ease-in-out 150ms;
+            }
+            .item:active {
+                color: rgba(6, 10, 36, 0.56);
+                text-decoration: line-through;
+            }
+            .item:hover {
+                text-decoration: line-through;
+                color: #00f3bb;
+            }
+        }
+    }
     .entrevistas {
         &__grillas {
             display: grid;
