@@ -502,6 +502,9 @@ html {
         -ms-flex-align: center;
             align-items: center;
   }
+  .header {
+    padding-top: 120px;
+  }
   .header .parrafo {
     width: 628px;
   }
