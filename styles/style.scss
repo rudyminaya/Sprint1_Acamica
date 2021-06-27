@@ -169,12 +169,14 @@ html {
                 margin: auto;
                 display: block;
             }
-        }
-        p {
-            font-size: 24px;
-            font-family: $font-ibmSans;
-            font-weight: 600;
-            text-align: center;
+
+            figcaption {
+                font-size: 24px;
+                font-family: $font-ibmSans;
+                font-weight: 600;
+                text-align: center;
+                padding: 10px 0;
+            }
         }
     }
 }
